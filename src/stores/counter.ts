@@ -6,7 +6,7 @@ export const useCounterStore = defineStore('counter', () => {
 
   const doubleCount = computed(() => count.value * 2)
 
-  const token = ref('')
+  const token = ref('xxxx')
 
   function increment() {
     count.value++
@@ -16,7 +16,7 @@ export const useCounterStore = defineStore('counter', () => {
     token.value = value
   }
 
-  const getToken = computed(() => token.value )
+  const getToken = computed(() => token.value)
 
-  return { count, doubleCount, increment }
+  return { count, doubleCount, increment, token, setToken, getToken }
 })

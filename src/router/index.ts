@@ -7,19 +7,43 @@ const router = createRouter({
       path: '/',
       redirect: '/dashbroad',
       component: Layout,
-      children: [{
-        path: '/dashbroad',
-        name: 'dashbroad',
-        component: () => import('../views/dashbroad.vue'),
-      },{
-        path: '/menu1',
-        name: 'menu1',
-        component: () => import('../views/menu1.vue'),
-      },{
-        path: '/menu2',
-        name: 'menu2',
-        component: () => import('../views/menu2.vue'),
-      }]
+      children: [
+        {
+          path: '/dashbroad',
+          name: 'dashbroad',
+          component: () /*webpackchunkname*/ => import('../views/dashbroad.vue')
+        },
+        {
+          path: '/menu1',
+          name: 'menu1',
+          component: () => import('../views/menu1.vue')
+        },
+        {
+          path: '/menu2',
+          name: 'menu2',
+          component: () => import('../views/menu2.vue')
+        },
+        {
+          path: '/menu3',
+          name: 'menu3',
+          component: () => import('../views/menu3.vue')
+        },
+        {
+          path: '/menu4',
+          name: 'menu4',
+          component: () => import('../views/menu4.vue')
+        },
+        {
+          path: '/menu5',
+          name: 'menu5',
+          component: () => import('../views/menu5.vue')
+        },
+        {
+          path: '/menu6',
+          name: 'menu6',
+          component: () => import('../views/menu6.vue')
+        }
+      ]
     },
     {
       path: '/about',

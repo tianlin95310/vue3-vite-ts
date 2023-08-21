@@ -1,3 +1,1 @@
-<template>
-  Author: TianLin
-</template>
+<template>Author: TianLin</template>
