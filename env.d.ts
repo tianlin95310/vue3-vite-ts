@@ -1,6 +1,13 @@
 /// <reference types="vite/client" />
-declare module "*.vue" {
-  import { DefineComponent } from "vue";
-  const component: DefineComponent<{}, {}, any>
-  export default component
+/// <reference path="./src/types/ApiModule.d.ts" />
+
+// 或者安装 TypeScript Vue Plugin
+// declare module "*.vue" {
+//   import { DefineComponent } from "vue";
+//   const component: DefineComponent<{}, {}, any>
+//   export default component
+// }
+
+interface ImportMetaEnv {
+
 }

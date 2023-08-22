@@ -9,6 +9,7 @@
       "@/*": ["./src/*"]
     },
     "allowImportingTsExtensions": true,
+    "isolatedModules": true,
     "noEmit": true,
   }
 }

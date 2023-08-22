@@ -6,6 +6,7 @@
     *，服务端渲染-SSR和SSG，Vite.js，Nuxt.js
     *，js基础复习
     *，Node.js中间件的使用，服务器端编程
+    *，Vite+ESBuild
     
     *，数据结构和算法
     *，leetcode算法练习

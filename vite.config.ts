@@ -14,7 +14,7 @@ export default defineConfig({
       scss: {
         // additionalData:'@import "./src/assets/style/main.scss";'
       }
-    }
+    },
   },
   resolve: {
     alias: {

@@ -33,7 +33,7 @@ const state = reactive({
     },
     {
       path: 'menu6',
-      name: '模块，命令空间'
+      name: '模块，命令空间，.d.ts'
     }
   ],
   showMenu: ref(true),

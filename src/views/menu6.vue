@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import * as myModule from 'myModule'
+import * as B from 'my-module'
 const namespace = () => {
 
 }
 const module = () => {
-  console.log('myModule', myModule)
+  // console.log('myModule', myMoqdule)
+  console.log('My', B)
 }
 </script>
 
