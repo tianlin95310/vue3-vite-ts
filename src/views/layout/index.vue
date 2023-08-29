@@ -17,7 +17,7 @@ const state = reactive({
     },
     {
       path: 'menu2',
-      name: '特殊的程序写法'
+      name: 'interface和type'
     },
     {
       path: 'menu3',
@@ -81,7 +81,7 @@ const gotoHome = () => {
     <main class="main-container" :class="{ 'full-size': !state.showMenu }">
       <header class="header">
         <div v-randomColor class="header-content clearfix-after">
-          <span class="item left item-text" @click="refreshToken">token:{{ store.token }}</span>
+          <span class="item left item-text" @click="refreshToken">pinia token:{{ store.token }}</span>
           <span class="item item-text">我是一个header</span>
         </div>
       </header>

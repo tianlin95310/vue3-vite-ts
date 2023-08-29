@@ -184,7 +184,7 @@ const vue3Ref = () => {
         <h4>异步组件</h4>
         <Suspense>
           <AsyncComponent></AsyncComponent>
-          <template #fallback> 111 </template>
+          <template #fallback> loadding </template>
         </Suspense>
       </div>
 

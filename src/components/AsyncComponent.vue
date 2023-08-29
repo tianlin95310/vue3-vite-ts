@@ -9,7 +9,6 @@ const AsyncComponent = defineAsyncComponent({
   delay: 200,
   errorComponent: ComponentError,
   timeout: 2000,
-  suspensible: true,
   onError: (e) => {
     console.log('onError', e)
   }

@@ -6,6 +6,7 @@ interface Men {
 class Empty {}
 
 class OtherEmpty {}
+
 const objectAsAinterface = () => {
   function name(men: Men) {
     console.log('men.name', men.name)
@@ -80,6 +81,77 @@ class APerson {
 const classUse = () => {
   let ap = new APerson('tian', 'lin')
   console.log(ap, Object.getPrototypeOf(ap), ap instanceof APerson)
+}
+
+{
+  // @ts-check
+// 有长度的类型
+export declare interface LengthAble {
+  length: number
+}
+// 入参限定有length属性
+declare function getLength<T extends LengthAble>(): number
+
+// 定义类型K必须在T中
+declare function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key]
+}
+let obj = { a: 1, b: 2 }
+getProperty(obj, 'a')
+getProperty(obj, 'c')
+
+// 参数必须使用类类型
+function create<Type>(type: { new (): Type }): type {
+  return new type()
+}
+
+// 泛型默认参数
+class BaseComponent {
+  name?: string
+}
+function create<T extends BaseComponent = BaseComponent, K = T[]>(component?: T, children?: K) {}
+
+// 类型运算符
+type Point = {
+  x: number;
+  y: number;
+}
+type P = keyof Point;
+
+// ReturnType
+type Predicate = (param: unknown) => never;
+type K = ReturnType<Predicate>;
+  // type K = never;
+
+// f is a fun, not a type
+function f() {
+  return {
+    a: 1
+  }
+}
+
+// typeof<f> typeof<f()>,this two cann't right use
+type M = ReturnType<typeof f>;
+
+// 类型截取
+type Person = {
+  age: number
+}
+type Age = Person["age"]
+  // type Age = number
+
+type condiType = '1' === 2 ? string : number;
+
+// 泛型type
+type NameOrId<T extends number | string> = T extends number ? number : string;
+
+function createElement<T extends number | string>(idOrName: T): NameOrId<T>
+
+// 类型转换
+type OptionsFlags<Type> = {
+  [Property in keyof Type]: boolean;
+};
+
 }
 </script>
 
