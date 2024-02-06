@@ -1,9 +1,8 @@
 <template>
   <pre>
     *，js基础复习
-    *，ts的使用，基础使用
-
-    *，webpack配置
+    *，ts的使用，基础用法
+    *，Webpack5：常见配置，微前端的使用
     *，Vite+ESBuild
     *，vue的响应式原理深入，模拟API的使用
     *，服务端渲染-SSR和SSG，Vite.js，Nuxt.js

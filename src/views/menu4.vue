@@ -184,8 +184,10 @@ const vue3Ref = () => {
         <h4>异步组件</h4>
         <Suspense>
           <AsyncComponent></AsyncComponent>
-          <template #fallback> loadding </template>
+          <template #fallback> loadding... </template>
         </Suspense>
+
+        <AsyncComponent></AsyncComponent>
       </div>
 
       <div class="card">
